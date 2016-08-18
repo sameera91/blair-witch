@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing National Parks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @national_parks.each do |national_park| %>
+      <tr>
+        <td><%= national_park.name %></td>
+        <td><%= national_park.description %></td>
+        <td><%= link_to 'Show', national_park %></td>
+        <td><%= link_to 'Edit', edit_national_park_path(national_park) %></td>
+        <td><%= link_to 'Destroy', national_park, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New National park', new_national_park_path %>

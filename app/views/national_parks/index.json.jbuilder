@@ -1,0 +1,1 @@
+json.array! @national_parks, partial: 'national_parks/national_park', as: :national_park

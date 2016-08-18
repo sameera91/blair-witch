@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Place Of Interests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Address</th>
+      <th>National park</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place_of_interests.each do |place_of_interest| %>
+      <tr>
+        <td><%= place_of_interest.name %></td>
+        <td><%= place_of_interest.latitude %></td>
+        <td><%= place_of_interest.longitude %></td>
+        <td><%= place_of_interest.address %></td>
+        <td><%= place_of_interest.national_park %></td>
+        <td><%= link_to 'Show', place_of_interest %></td>
+        <td><%= link_to 'Edit', edit_place_of_interest_path(place_of_interest) %></td>
+        <td><%= link_to 'Destroy', place_of_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Place of interest', new_place_of_interest_path %>

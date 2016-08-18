@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @place_of_interest.name %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @place_of_interest.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @place_of_interest.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @place_of_interest.address %>
+</p>
+
+<p>
+  <strong>National park:</strong>
+  <%= @place_of_interest.national_park %>
+</p>
+
+<%= link_to 'Edit', edit_place_of_interest_path(@place_of_interest) %> |
+<%= link_to 'Back', place_of_interests_path %>

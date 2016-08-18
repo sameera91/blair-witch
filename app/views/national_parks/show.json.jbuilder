@@ -1,0 +1,1 @@
+json.partial! "national_parks/national_park", national_park: @national_park
