@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'place_of_interests#index'
   resources :place_of_interests
   resources :national_parks
   # The priority is based upon order of creation: first created -> highest priority.
